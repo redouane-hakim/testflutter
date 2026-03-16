@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import  'api_key.dart' ;
 
 void main() {
   runApp(MaterialApp(
@@ -21,7 +22,7 @@ class _TemperaturePageState extends State<TemperaturePage> {
   double? temperature;
   String cityName = '';
 
-  final apiKey = '452ccf33179f50ae141516180017eb9d'; // remplace par ta clé API OpenWeatherMap
+  final apiKey = tmdbApiKey ; // remplace par ta clé API OpenWeatherMap
 
   Future<void> fetchTemperature(String city) async {
     final url =
